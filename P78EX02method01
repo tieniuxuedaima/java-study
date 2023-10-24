@@ -1,3 +1,4 @@
+//1.编写程序声明一个method1方法，在方法中打印一个10*8的 * 矩形，在main方法中调用该方法
 public class retangle{
   public void method(){
     for(int i = 1;i<11;i++){
