@@ -29,6 +29,8 @@ public class Game{
     System.out.print("请选择一个10-99之间的数字作为您的号码：");
     Scanner scan = new Scanner(System.in);
     int select = scan.nextInt();
+    int numbersShi = numbers /10, numbersGe = numbers % 10；
+    int selectShi = select /10, selectGe = select %10;
     if(select == numbers){
         System.out.println("恭喜获得10000美元奖金");
     }else if(selelctShi == numbersGe && selectGe == numbersShi ){
@@ -227,7 +229,17 @@ public class pirnt{
   }
 }
 //3000米长的绳子，每天减一半。问多少天这个绳子会小于5米？不考虑小数。
-
+public class pirntCutday{
+  public static void main(){
+      int length = 3000;
+      int day = 0;
+      do{
+          length /= 2;
+          day +=1;
+      }while(length>5)
+      System.out.println("3000米长的绳子，每天减一半,"+day+"天后绳子小于5米");
+  }
+}
 
 
 
