@@ -1,1 +1,85 @@
+import Math.sqrt.java;//求ax2+bx+c=0方程的根
+public class Sqrt{
+  public static void main(Stringp[] args){
+    System.out.println("请输出ax^2+bx+c=0的根");
+    if(b*b - 4*a*c == 0){
+      double result = (-b+Math.sqrt(b*b - 4*a*c))/(2*a);
+      System.out.println("该方程组有两个相等的实根：x1 = x2 = "+result);
+    }else if(b*b - 4*a*c > 0){
+      double result1 = (-b+Math.sqrt(b*b - 4*a*c))/(2*a);
+      double result2 = (-b-Math.sqrt(b*b - 4*a*c))/(2*a);
+      System.out.println("该方程组有两个不相等的实根：x1 = "+result1+",x2 = "+result2);
+    }else System.out.println("该方程组没有实根");
+  }
+}
+/*彩票游戏
+假设你想开发一个玩彩票的游戏，程序随机地产生一个两位数的彩票，提示用户输入一个两位数，然后按照下面的规则判定用户是否能赢。
+
+1)如果用户输入的数匹配彩票的实际顺序，奖金10 000美元。
+2)如果用户输入的所有数字匹配彩票的所有数字，但顺序不一致，奖金 3 000美元。
+3)如果用户输入的一个数字仅满足顺序情况下匹配彩票的一个数字，奖金1 000美元。
+4)如果用户输入的一个数字仅满足非顺序情况下匹配彩票的一个数字，奖金500美元。
+5)如果用户输入的数字没有匹配任何一个数字，则彩票作废。
+**/
+import math.random.java;
+import util.Scanner.java;
+public class Game{
+  public static void main(String[] args){
+    int numbers = int (Math.random() * 90 +10);
+    System.out.print("请选择一个10-99之间的数字作为您的号码：");
+    Scanner scan = new Scanner(System.in);
+    int select = scan.nextInt();
+    if(select == numbers){
+        System.out.println("恭喜获得10000美元奖金");
+    }else if(selelctShi == numbersGe && selectGe == numbersShi ){
+        System.out.println("恭喜获得3000美元奖金");
+    }else if(selelctShi == numbersShi || selectGe == numbersGe ){
+        System.out.println("恭喜获得1000美元奖金");
+    }else if(selelctShi == numbersGe || selectGe == numbersShi ){
+        System.out.println("恭喜获得500美元奖金");
+   }else System.out.println("抱歉，您没有中奖");
+    scan.close();
+}
+
+/*赌数游戏
+提供三个1-6的随机数，作为掷骰子得到的点数。如果各个点数相同，则为豹子。
+如果三个骰子点数和，小于或等于9，则为“小”。
+如果三个骰子点数和，大于9，则为“大”。
+用户随机选择：押大、押小或者押豹子。通过判断，输出客户是否押正确。
+**/
+import math.random.java;
+public class Touzi{
+  public static void main(String[] args){
+    Scanner scan = int(Math.random() * 6 +1);
+    int num1 = scan.nextInt();
+    int num2 = scan.nextInt();
+    int num3 = scan.nextInt();
+    String result = "";
+    if(num1 == num2 && num2 == num3){
+        result += "豹子";
+    }else if(num1 +num2 +num3 >9){
+        result += "大";
+    }else  result += "小";
+    System.out.print("请下注：");
+    String select = scan.nextString();
+    if(select == result){
+        System.out.println("您押中了");
+    }else System.out.println("抱歉！您没押中");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
