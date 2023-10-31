@@ -1,1 +1,406 @@
+/*编写一个Student类，包含name、gender、age、id、score属性，分别为String、String、int、int、double类型。
+类中声明一个say方法，返回String类型，方法返回信息中包含所有属性值。
+在另一个StudentTest类中的main方法中，创建Student对象，并访问say方法和所有属性，并将调用结果打印输出。
+**/
 
+
+/*编程题1
+定义一个丈夫Husband类，有姓名、年龄、妻子属性
+定义一个妻子Wife类，有姓名、年龄、丈夫属性
+丈夫类中有一个getInfo方法，其中，能显示自己的姓名，年龄，和他的妻子的姓名，年龄
+妻子类中有一个getInfo方法，其中，能显示自己的姓名，年龄，和她的丈夫的姓名，年龄
+定义一个测试类，创建妻子和丈夫对象，然后测试
+**/
+
+/*
+编程题2
+定义银行账户类Account，有属性：卡号cid，余额balance，所属用户Customer   
+银行账户类Account有方法：
+（1）getInfo()，返回String类型，返回卡的详细信息
+（2）取钱方法withdraw()，参数自行设计，如果取钱成功返回true，失败返回false
+（3）存钱方法save()，参数自行设计，如果存钱成功返回true，失败返回false
+   
+其中Customer类有姓名、身份证号、联系电话、家庭地址等属性
+    Customer类有方法say()，返回String类型，返回他的个人信息。
+
+在测试类Bank中创建银行账户类对象和用户类对象，并设置信息，与显示信息
+**/
+
+
+/*
+哪个选项和show()方法重载
+class Demo{
+    void show(int a,int b,float c){}
+}
+
+A.void show(int a,float c,int b){}//yes
+
+B,void show(int a,int b,float c){}//一模一样。不可以出现在同一个类中。
+
+C.int show(int a,float c,int b){return a;}//yes。
+
+D.int show(int a,float c){return a;}//yes
+**/
+
+
+/*
+方法的声明与调用
+（1）声明一个圆柱体类型，
+（2）声明属性：底边的半径，和高
+（3）声明方法：
+A：方法的功能：在方法中打印圆柱体的详细信息
+ 圆柱体的底边的半径是xxx，高是xxx，底面积是xxx，体积是xxx。
+B：方法的功能：返回底面积 
+C：方法的功能：返回体积
+D：方法的功能：为圆柱体的底边的半径，和高赋值
+E：方法的功能：为圆柱体的底边的半径，和高赋值，并返回赋值的结果
+ 如果底边的半径或高为<=0，赋值失败，返回false，否则返回true
+（4）并测试
+**/
+
+
+/*
+方法的重载
+方法重载(overload)必须满足________
+A. 在不同class中定义的方法     B.在同一类型中定义的方法
+C. 方法名必须相同              D.返回类型必须相同
+E. 参数一定不同                F.参数可以相同
+**/
+
+/*
+输出结果：class Demo{
+public static void main(String[] args){
+show(0);
+show(1);
+}
+public static void show(int i){
+switch(i){
+default:
+i+=2;
+case 1:
+i+=1;
+case 4:
+i+=8;
+case 2:
+i+=4;
+}
+System.out.println("i="+i);
+}
+}
+**/
+
+
+
+/*
+输出结果：class Demo{
+public static void main(String[] args){
+int x = 1;
+for(show('a'); show('b') && x<3; show('c')){
+show('d'); 
+x++;
+}
+}
+public static boolean show(char ch){
+System.out.print(ch);
+return true;
+}
+}
+**/
+
+
+/*
+输出结果：public class Test1 {
+ public static boolean foo(char c) {
+  System.out.print(c);
+  return true;
+ }
+
+ public static void main(String[] args) {
+  int i = 0;
+  for (foo('A'); foo('B') && (i < 2); foo('C')) {
+   i++;// 1 2
+   foo('D');
+  }
+ }
+}
+**/
+
+/*
+面向对象三大特征的说明
+作用域public,private,protected,以及默认不写时的区别
+
+
+找错
+public class Something {
+   void doSomething () {
+       private String s = "";
+       int l = s.length();
+   }
+}
+
+构造器Constructor是否可被override
+**/
+
+
+/*
+编程创建一个Box类，在其中定义三个变量表示一个立方体的长、宽和高，定义一个方法求立方体的体积。创建一个对象，求给定尺寸的立方体的体积。
+（提供无参的构造器和一个有参的构造器）
+**/
+
+
+/*
+定义一个圆类型
+提供显示圆周长功能的方法
+提供显示圆面积的方法
+提供无参的构造器和一个有参的构造器
+**/
+
+
+
+
+/*
+设计一个Dog类，有名字、颜色和年龄属性，定义构造器初始化这些属性，定义输出方法show()显示其信息。
+提供无参的构造器和一个有参的构造器
+**/
+
+
+
+/*
+定义一个类，用于描述坐标点
+0——————>X
+          | 
+          |
+          |          P(X,Y)
+          |
+          |
+          Y  
+
+（1）具有计算当前点到原点距离的功能
+（2）求到任意一点（m，n）的距离
+（3）求到任意一点（Point p）的距离
+（4）具有坐标点显示功能，显示格式（x，y）
+（5）提供无参的构造器和一个有参的构造器
+**/
+
+
+
+/*
+写一个人的类
+属性：名字，性别，年龄；提供无参的构造器和一个有参的构造器
+方法：（1）自我介绍的方法（2）吃饭的方法
+创建一个对象“张三”
+**/
+
+
+
+/*
+写一个汽车类：
+属性：品牌；车长；颜色；价格；
+创建五个对象：“捷达”，“宝马”，“劳斯莱斯”，“科鲁兹”，“迈锐宝”
+提供无参的构造器和一个有参的构造器
+**/
+
+
+
+
+/*
+写一个课程类：
+属性：课程名；学时；任课老师；
+创建五个对象：“c语言”，“java编程”，“php网络编程”，“c++”，“数据结构”
+提供无参的构造器和一个有参的构造器
+**/
+
+
+/*
+输出结果：public class Test1 {
+
+ public static void main(String[] args) {
+  new A(new B());
+ }
+}
+class A{
+ public A(){
+  System.out.println("A");
+ }
+ public A(B b){
+  this();
+  System.out.println("AB");
+ }
+}
+class B{
+ public B(){
+  System.out.println("B");
+ }
+}
+
+
+
+
+输出结果：public class Test{ 
+public static void leftshift(int i, int j){ 
+        i+=j; 
+} 
+public static void main(String args[]){ 
+int i = 4, j = 2; 
+leftshift(i, j); 
+System.out.println(i); 
+} 
+} 
+
+
+
+
+输出结果：public class Demo{ 
+public static void main(String[] args){ 
+int[] a=new int[1]; 
+modify(a); 
+System.out.println(a[0]); //
+}
+public static void modify(int[] a){ 
+a[0]++;
+} 
+} 
+
+输出结果：public class TestA {
+int i ;
+void change(int i){
+i++;
+System.out.println(i);
+}
+void change1(TestA t){
+t.i++;
+System.out.println(t.i);
+}
+public static void main(String[] args) {
+TestA ta = new TestA();
+System.out.println(ta.i); //
+ta.change(ta.i);//
+System.out.println(ta.i); //
+ta.change1(ta);  //
+System.out.println(ta.i);//
+}
+}
+
+
+输出结果：class Value{
+    int i = 15;
+}
+class Test{
+public static void main(String argv[]) {
+Test t = new Test();
+t.first();
+}
+
+public void first() {
+int i = 5;
+Value v = new Value();
+v.i = 25;
+second(v, i);
+System.out.println(v.i);
+}
+
+public void second(Value v, int i) {
+i = 0;
+v.i = 20;
+Value val = new Value();
+v = val;
+System.out.print(v.i + " " + i);
+}
+}
+
+
+
+输出结果：1. public class Test {
+2. int x= 12;
+3. public void method(int x) {
+4. x+=x;
+5. System.out.println(x);
+6. }
+7. }
+Given:
+34. Test t = new Test();
+35. t.method(5);
+What is the output from line 5 of the Test class?
+
+
+
+输出结果： public static void main(String[] args) {
+  int i = 0;
+  change(i);
+  i = i++;
+  System.out.println("i = " + i);
+ }
+ public static void change(int i){
+  i++;
+ }
+
+
+
+输出结果： public static void main(String[] args) {
+  String str = new String("world");
+  char[] ch = new char[]{'h','e','l','l','o'};
+  change(str,ch);
+  System.out.println(str);
+  System.out.println(String.valueOf(ch));
+ }
+ public static void change(String str, char[] arr){
+  str = "change";
+  arr[0] = 'a';
+  arr[1] = 'b';
+  arr[2] = 'c';
+  arr[3] = 'd';
+  arr[4] = 'e';
+ }
+
+
+输出结果：public class Test {
+ int a;
+ int b;
+ public void f(){
+  a = 0;
+  b = 0;
+  int[] c = {0};
+  g(b,c);
+  System.out.println(a + " " + b + " " + c[0]);
+ }
+ public void g(int b, int[] c){
+  a = 1;
+  b = 1;
+  c[0] = 1;
+ }
+ public static void main(String[] args) {
+  Test t = new Test();
+  t.f();
+ }
+}
+
+
+**/
+
+
+
+
+/*
+补充代码：import java.util.Arrays;
+
+public class PassValueExer2{
+ public static void main(String[] args){
+  int[] array = {3,2,5,1,7};
+  
+  //调用sort方法，实现从大到小排序
+  //在此处补充代码
+  ....
+  
+  //显示结果
+  System.out.println("排序后的结果是：" + Arrays.toString(array));
+ }
+ 
+ //要求使用冒泡排序完成
+ public void sort(//形参？){
+  
+ }
+}
+**/
+
+
+//当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?
