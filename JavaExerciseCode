@@ -273,7 +273,20 @@ public class oddSum{
   }
 }
 //输出从1到100之间所有不能被3整除的数;并输出这些整数的和
-
+public class printThirdBeishu{
+  public static void main(String[] args){
+        int sum = 0;
+        for(int i = 1;i < 100;i++){
+              if(i % 3 ==0){
+                  continue;
+              }else{
+                  System.out.println(i);
+                  sum += i;
+              }
+        }
+        System.out.println("和为"+sum);
+  }
+}
 /*猜数字游戏
 随机生成一个100以内的数，猜数字游戏：
 从键盘输入数，如果大了提示，大了，如果小了，提示小了，如果对了，就不再猜了，并统计一共猜了多少次？
@@ -282,6 +295,7 @@ import java.util.Random;
 Random rand = new Random();
 int num= rand.nextInt(100);
 **/
+
 //打印1-100之间数，其中3、5、7的倍数不打印（continue）
 
 /*一个数如果恰好等于它的因子之和，这个数就称为"完数"。（因子：除去这个数本身的约数）
