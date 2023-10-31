@@ -50,10 +50,10 @@ public class Game{
 import math.random.java;
 public class Touzi{
   public static void main(String[] args){
-    Scanner scan = int(Math.random() * 6 +1);
-    int num1 = scan.nextInt();
-    int num2 = scan.nextInt();
-    int num3 = scan.nextInt();
+    Scanner scan = new Scanner(System.in);
+    int num1 = int(Math.random() * 6 +1);
+    int num2 = int(Math.random() * 6 +1);
+    int num3 = int(Math.random() * 6 +1);
     String result = "";
     if(num1 == num2 && num2 == num3){
         result += "豹子";
@@ -65,11 +65,65 @@ public class Touzi{
     if(select == result){
         System.out.println("您押中了");
     }else System.out.println("抱歉！您没押中");
+    scan.close();
   }
 }
 
-
-
+/*生肖问题
+编写一个程序，为一个给定的年份找出其对应的中国生肖。
+中国的生肖基于12年一个周期，每年用一个动物代表：
+ rat（鼠）、ox（牛）、tiger（虎）、rabbit（兔）、dragon（龙）、snake（蛇）、
+    horse（马）、sheep（羊）、monkey（候）、rooster（鸡）、dog（狗）、pig（猪）。
+提示：2019年：猪   2019 % 12 == 3 
+**/
+public class Shengxiao{
+  public static void main(String[] args){
+      Scanner input = new Scanner(System.in);
+      year = input.nextInt();
+      int result = year % 12;
+      switch(result){
+            case 0:
+                System.out.prinln(year+"年是猴年");
+                break;
+            case 1:
+                System.out.prinln(year+"年是鸡年");
+                break;
+            case 2:
+                System.out.prinln(year+"年是狗年");
+                break;
+            case 3:
+                System.out.prinln(year+"年是猪年");
+                break;
+            case 4:
+                System.out.prinln(year+"年是鼠年");
+                break;
+            case 5:
+                System.out.prinln(year+"年是牛年");
+                break;
+            case 6:
+                System.out.prinln(year+"年是虎年");
+                break;
+            case 7:
+                System.out.prinln(year+"年是兔年");
+                break;
+            case 8:
+                System.out.prinln(year+"年是龙年");
+                break;
+            case 9:
+                System.out.prinln(year+"年是蛇年");
+                break;
+            case 10:
+                System.out.prinln(year+"年是马年");
+                break;
+            case 11:
+                System.out.prinln(year+"年是羊年");
+                break;
+            default:
+                System.out.prinln("您输入的年份有误");
+      }
+      input.close();
+  }
+}
 
 
 
