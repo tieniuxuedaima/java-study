@@ -241,7 +241,16 @@ public class pirntCutday{
   }
 }
 //打印1-100之间非13的倍数，使用continue语句
-
+public class printThirteenBeishu{
+  public static void main(String[] args){
+    for(int i = 1;i <101;i++){
+        if(i % 13 == 0){
+              continue;
+        }
+    System.out.println(i);
+    }
+  }
+}
 
 
 
@@ -261,6 +270,7 @@ int num= rand.nextInt(100);
 /*一个数如果恰好等于它的因子之和，这个数就称为"完数"。（因子：除去这个数本身的约数）
 例如6=1＋2＋3.编程 找出1000以内的所有完数
 **/
+
 
 
 
