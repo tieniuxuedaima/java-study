@@ -338,13 +338,10 @@ public class print357beishu{
 例如6=1＋2＋3.编程 找出1000以内的所有完数
 **/
 int sum = 0;//sum表示这个数的因子之和
-for(int i = 1;i <=100; i++){         //找完数
-    for(int j= 1;j<i;j++){           //找i的因子
+for(int i = 2;i <=100; i++){         //找完数
+    for(int j= 2;j<i;j++){           //找i的因子
         if(i%j == 0){      //找因子之和
-            if(i/j == i) {break;}
-            else{
-                    sum += i/j;
-            }
+             sum += i/j;
         }
     }
     if(i== sum){
