@@ -295,12 +295,63 @@ import java.util.Random;
 Random rand = new Random();
 int num= rand.nextInt(100);
 **/
+import java.util.Random;
+public class guessNum{
+  public static void main(String[] args){
+    Random rand = new Random();
+    int num = rand.nextInt(100);
+    Scanner input = new Scanner(System.in);
+    int flag = 1,count = 0;
+    while(flag){
+        int choice = input.nextInt();
+        if(choice == num){
+              count +=1;
+              System.out.println{"恭喜你猜对了"};
+              flag = 0;
+        }else if(choice < num){
+              count +=1;
+              System.out.println{"猜小了，请重新输入"};
+        }else if(choice > num){
+              count +=1;
+              System.out.println{"猜大了，请重新输入"};
+        }else System.out.println{"输入有误，请重新输入"};
+    }
+    System.out.println("一共猜了"+sum+"次");
+    rand.close();
+    input.close();
+  }
+}
+
 
 //打印1-100之间数，其中3、5、7的倍数不打印（continue）
+public class print357beishu{
+  public static void main(String[] args){
+      for(int i = 1;i <= 100;i++){
+          if(i%3==0 || i%5==0|| i%7==0){
+              continue;
+          }else System.out.println(i);
+      }
+  }
+}
 
 /*一个数如果恰好等于它的因子之和，这个数就称为"完数"。（因子：除去这个数本身的约数）
 例如6=1＋2＋3.编程 找出1000以内的所有完数
 **/
+int sum = 0;//sum表示这个数的因子之和
+for(int i = 1;i <=100; i++){         //找完数
+    for(int j= 1;j<i;j++){           //找i的因子
+        if(i%j == 0){      //找因子之和
+            if(i/j == i) {break;}
+            else{
+                    sum += i/j;
+            }
+        }
+    }
+    if(i== sum){
+      System.out.println(i);
+    }
+}
+
 
 //输入两个正整数m和n，求其最大公约数和最小公倍数
 
